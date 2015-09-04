@@ -11,6 +11,8 @@
 		19762A101B9A184E00C8B0AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19762A0F1B9A184E00C8B0AA /* main.m */; };
 		19762A121B9A184E00C8B0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19762A111B9A184E00C8B0AA /* Assets.xcassets */; };
 		19762A151B9A184E00C8B0AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19762A131B9A184E00C8B0AA /* MainMenu.xib */; };
+		19762A221B9A21C500C8B0AA /* RMGSolidColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19762A211B9A21C500C8B0AA /* RMGSolidColorView.m */; settings = {ASSET_TAGS = (); }; };
+		19762A241B9A230F00C8B0AA /* project_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19762A231B9A230F00C8B0AA /* project_notes.txt */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		19762A111B9A184E00C8B0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19762A141B9A184E00C8B0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		19762A161B9A184E00C8B0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19762A201B9A21C500C8B0AA /* RMGSolidColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGSolidColorView.h; sourceTree = "<group>"; };
+		19762A211B9A21C500C8B0AA /* RMGSolidColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGSolidColorView.m; sourceTree = "<group>"; };
+		19762A231B9A230F00C8B0AA /* project_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = project_notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 				19762A131B9A184E00C8B0AA /* MainMenu.xib */,
 				19762A161B9A184E00C8B0AA /* Info.plist */,
 				19762A0E1B9A184E00C8B0AA /* Supporting Files */,
+				19762A1F1B9A219B00C8B0AA /* Classes */,
 			);
 			path = "Complex Table View 1";
 			sourceTree = "<group>";
@@ -67,8 +73,42 @@
 			isa = PBXGroup;
 			children = (
 				19762A0F1B9A184E00C8B0AA /* main.m */,
+				19762A231B9A230F00C8B0AA /* project_notes.txt */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19762A1C1B9A210200C8B0AA /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Classes";
+			sourceTree = "<group>";
+		};
+		19762A1D1B9A214200C8B0AA /* View Classes */ = {
+			isa = PBXGroup;
+			children = (
+				19762A201B9A21C500C8B0AA /* RMGSolidColorView.h */,
+				19762A211B9A21C500C8B0AA /* RMGSolidColorView.m */,
+			);
+			name = "View Classes";
+			sourceTree = "<group>";
+		};
+		19762A1E1B9A217500C8B0AA /* Controller Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Controller Classes";
+			sourceTree = "<group>";
+		};
+		19762A1F1B9A219B00C8B0AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				19762A1C1B9A210200C8B0AA /* Model Classes */,
+				19762A1D1B9A214200C8B0AA /* View Classes */,
+				19762A1E1B9A217500C8B0AA /* Controller Classes */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +170,7 @@
 			files = (
 				19762A121B9A184E00C8B0AA /* Assets.xcassets in Resources */,
 				19762A151B9A184E00C8B0AA /* MainMenu.xib in Resources */,
+				19762A241B9A230F00C8B0AA /* project_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19762A101B9A184E00C8B0AA /* main.m in Sources */,
+				19762A221B9A21C500C8B0AA /* RMGSolidColorView.m in Sources */,
 				19762A0D1B9A184E00C8B0AA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

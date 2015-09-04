@@ -3,3 +3,10 @@ Project: Complex Table View 1 - Author: Gavin M. Fulmer
 Created: 09.03.2015 - Copyright (c) 2015 RavenWorks Media Group, L.L.C.
 ----------------------------------------------------------------------
 
+-------------------
+09.03.2015 - 2:09pm
+-------------------
+
+I have added the RMGSolidColorView class files. The table view's row
+configuration will have a small custom view that will draw a random color.
+The custom view will be set to this class.
