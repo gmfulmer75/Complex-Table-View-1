@@ -7,7 +7,10 @@
 //
 
 #import "RMGDesktopPicture.h"
+#import "RMGSolidColorView.h"
 
 @implementation RMGDesktopPicture
+
+@synthesize desktopPictImage = _desktopPictImage, cellDescField = _cellDescField, solidColorView = _solidColorView;
 
 @end
