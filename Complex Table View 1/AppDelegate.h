@@ -8,8 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate>
+{
+    NSMutableArray *_desktopPictures;
+}
 
+@property (nonatomic) NSMutableArray *desktopPictures;
 
 @end
 

@@ -13,7 +13,11 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     [super drawRect:dirtyRect];
-    // Drawing code here.
+    
+    [_solidColor set];
+    [NSBezierPath fillRect:[self bounds]];
 }
+
+@synthesize solidColor = _solidColor;
 
 @end

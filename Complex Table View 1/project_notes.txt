@@ -20,3 +20,25 @@ I have added the RMGDesktopPicture class.
 I have added identifiers for the view cell views along with the table columns
 in the table view.
 
+-------------------
+09.08.2015 - 9:10am
+-------------------
+
+The Lord has truly blessed me this morning.  I have set-up the rest of the code
+that loads all the desktop pictures into the app delegate's _desktopPictures
+array.  In addition, the complex table view has been set-up to display the pictures
+and its name.  This concludes the master portion of the master-detail design.
+
+There was a hard-to-find bug that I was unable to figure out yesterday.  The uncaught
+exception gave a little information about the crash.  Something to do with aString != nil.
+Yesterday, I localized the problem code to be the loading portion of the desktop picture's
+picture name into the NSView-based cell view.  However, my mind was tired and I gave it
+up for this morning.
+
+This morning came and my mind was refreshed.  The problem was that the 41st picture was
+actually a directory.  My code did not properly handle this, as it placed within the
+subviewField.stringValue (for NSView-based cells) nil.  I placed some code that would
+detect whether the directory entry was a directory or just a file.  This solved the problem.
+
+
+

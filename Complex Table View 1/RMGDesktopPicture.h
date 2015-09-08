@@ -12,14 +12,26 @@
 
 @interface RMGDesktopPicture : NSObject
 {
-    NSImageView *_desktopPictImage;
-    NSTextField *_cellDescField;
+    NSString *_pictureName;
+    NSImage *_pictureImage;
     
-    RMGSolidColorView *_solidColorView;
+    NSColor *_solidColor;
+    
+    NSDate *_creationDate;
+    NSDate *_lastAccessed;
+    
+    BOOL _isDirectory;
 }
 
-@property (nonatomic) NSImageView *desktopPictImage;
-@property (copy, nonatomic) NSTextField *cellDescField;
-@property (nonatomic) RMGSolidColorView *solidColorView;
++ (RMGDesktopPicture *)desktopPictureWithURL:(NSURL *)pictURL;
+- (RMGDesktopPicture *)initWithURL:(NSURL *)pictURL;
+
+@property (copy, nonatomic) NSString *pictureName;
+@property (copy, nonatomic) NSImage *pictureImage;
+@property (copy, nonatomic) NSDate *creationDate;
+@property (copy, nonatomic) NSDate *lastAccessed;
+@property (copy, nonatomic) NSColor *solidColor;
+
+@property (nonatomic) BOOL isDirectory;
 
 @end

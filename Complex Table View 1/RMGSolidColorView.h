@@ -9,5 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 @interface RMGSolidColorView : NSView
+{
+    NSColor *_solidColor;
+}
+
+@property (copy, nonatomic) NSColor *solidColor;
 
 @end
