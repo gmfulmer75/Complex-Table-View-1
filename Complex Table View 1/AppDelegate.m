@@ -15,6 +15,11 @@
 @interface AppDelegate ()
 
 - (NSMutableArray *)populateDesktopPictures;
+
+@property (weak) IBOutlet NSImageView *detailedView;
+@property (weak) IBOutlet NSTextField *detailedPictName;
+@property (weak) IBOutlet NSTextField *detailedCreationDate;
+@property (weak) IBOutlet NSTextField *detailedLastAccessed;
 @property (weak) IBOutlet NSWindow *window;
 
 @end
@@ -46,7 +51,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    RMGDesktopPicture *displayPicture = [_desktopPictures objectAtIndex:0];
+    
+    self.detailedView.image = [displayPicture pictureImage];
+    self.detailedPictName.stringValue = [displayPicture pictureName];
+    
+    self.detailedCreationDate.objectValue = [displayPicture creationDate];
+    self.detailedLastAccessed.objectValue = [displayPicture lastAccessed];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -117,6 +128,20 @@
     return viewToReturn;
 }
 
+- (void)tableViewSelectionDidChange:(nonnull NSNotification *)aNotification
+{
+    NSTableView *tableView = [aNotification object];
+    NSInteger selectedRow = [tableView selectedRow];
+    
+    RMGDesktopPicture *displayPicture = [_desktopPictures objectAtIndex:selectedRow];
+    
+    self.detailedView.image = [displayPicture pictureImage];
+    self.detailedPictName.stringValue = [displayPicture pictureName];
+    
+    self.detailedCreationDate.objectValue = [displayPicture creationDate];
+    self.detailedLastAccessed.objectValue = [displayPicture lastAccessed];
+}
+
 #pragma mark Class Extension Methods
 
 - (NSMutableArray *)populateDesktopPictures
@@ -124,8 +149,7 @@
     NSMutableArray *pictures = [[NSMutableArray alloc] init];
     NSURL *baseURL = [NSURL fileURLWithPath:@"/Library/Desktop Pictures" isDirectory:YES];
     
-    NSArray *propertyKeys = [NSArray arrayWithObjects:NSURLLocalizedNameKey, NSURLIsDirectoryKey, NSURLCreationDateKey,
-                             NSURLContentAccessDateKey, nil];
+    NSArray *propertyKeys = [NSArray arrayWithObjects:NSURLLocalizedNameKey, NSURLIsDirectoryKey, NSURLCreationDateKey, NSURLContentAccessDateKey, nil];
     
     NSDirectoryEnumerationOptions enumOpts = NSDirectoryEnumerationSkipsHiddenFiles;
     NSFileManager *fm = [[NSFileManager alloc] init];
