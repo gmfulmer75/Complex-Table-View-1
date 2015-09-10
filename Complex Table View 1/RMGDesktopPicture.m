@@ -48,6 +48,9 @@
             [pictURL getResourceValue:&returnedValue forKey:NSURLContentAccessDateKey error:nil];
             self.lastAccessed = returnedValue;
             
+            [pictURL getResourceValue:&returnedValue forKey:NSURLContentModificationDateKey error:nil];
+            self.lastModification = returnedValue;
+            
             _pictureImage = [[NSImage alloc] initWithContentsOfURL:pictURL];
             _solidColor = [self generateRandomColor];
         }
@@ -73,5 +76,6 @@
 
 @synthesize pictureName = _pictureName, pictureImage = _pictureImage, creationDate = _creationDate;
 @synthesize lastAccessed = _lastAccessed, solidColor = _solidColor, isDirectory = _isDirectory;
+@synthesize lastModification = _lastModification;
 
 @end

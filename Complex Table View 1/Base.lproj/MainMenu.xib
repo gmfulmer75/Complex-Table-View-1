@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="detailedCreationDate" destination="RO8-J4-J7s" id="nhu-ju-SWK"/>
                 <outlet property="detailedLastAccessed" destination="YSq-ER-eGp" id="Kkc-NS-AIU"/>
+                <outlet property="detailedLastContentModification" destination="bz8-cv-G6Z" id="mbq-U7-Ghw"/>
                 <outlet property="detailedPictName" destination="dfA-yE-pO8" id="tOO-r8-bOb"/>
                 <outlet property="detailedView" destination="PEf-QE-4OH" id="VKL-Pe-ZIA"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
@@ -802,7 +803,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="iXd-7X-Umb"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RO8-J4-J7s">
-                        <rect key="frame" x="354" y="90" width="107" height="17"/>
+                        <rect key="frame" x="373" y="90" width="76" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="iXV-af-hQh">
                             <dateFormatter key="formatter" dateStyle="short" id="kbT-YF-8Tw"/>
                             <font key="font" metaFont="cellTitle"/>
@@ -811,7 +812,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YSq-ER-eGp">
-                        <rect key="frame" x="354" y="65" width="107" height="17"/>
+                        <rect key="frame" x="373" y="65" width="76" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="WFL-dO-iOl">
                             <dateFormatter key="formatter" dateStyle="short" id="1nY-NX-kNO"/>
                             <font key="font" metaFont="cellTitle"/>
@@ -843,9 +844,26 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLm-8b-rT9">
+                        <rect key="frame" x="261" y="40" width="113" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Last Modification:" id="DIi-gW-NuJ">
+                            <font key="font" metaFont="titleBar" size="12"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bz8-cv-G6Z">
+                        <rect key="frame" x="373" y="40" width="76" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="K86-yd-bQn">
+                            <dateFormatter key="formatter" dateStyle="short" id="guJ-h3-Hv3"/>
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="644" y="417"/>
+            <point key="canvasLocation" x="448" y="404"/>
         </window>
     </objects>
     <resources>

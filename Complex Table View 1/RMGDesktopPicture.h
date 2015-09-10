@@ -20,6 +20,8 @@
     NSDate *_creationDate;
     NSDate *_lastAccessed;
     
+    NSDate *_lastModification;
+    
     BOOL _isDirectory;
 }
 
@@ -28,6 +30,8 @@
 
 @property (copy, nonatomic) NSString *pictureName;
 @property (copy, nonatomic) NSImage *pictureImage;
+
+@property (copy, nonatomic) NSDate *lastModification;
 @property (copy, nonatomic) NSDate *creationDate;
 @property (copy, nonatomic) NSDate *lastAccessed;
 @property (copy, nonatomic) NSColor *solidColor;

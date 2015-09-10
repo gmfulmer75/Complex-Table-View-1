@@ -11,6 +11,7 @@
 #import "RMGDesktopPicture.h"
 
 #define SUBVIEWS_SECOND_COLUMN      4
+#define INITIAL_COLOR_CAPACITY      5
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
 @property (weak) IBOutlet NSTextField *detailedPictName;
 @property (weak) IBOutlet NSTextField *detailedCreationDate;
 @property (weak) IBOutlet NSTextField *detailedLastAccessed;
+@property (weak) IBOutlet NSTextField *detailedLastContentModification;
 @property (weak) IBOutlet NSWindow *window;
 
 @end
@@ -58,6 +60,7 @@
     
     self.detailedCreationDate.objectValue = [displayPicture creationDate];
     self.detailedLastAccessed.objectValue = [displayPicture lastAccessed];
+    self.detailedLastContentModification.objectValue = [displayPicture lastModification];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -102,7 +105,14 @@
             {
                 subview = [cellViewSubviews objectAtIndex:index];
                 
-                if ([subview.identifier isEqualToString:@"solidColorView"])
+                if ([subview.identifier isEqualToString:@"pictureName"])
+                {
+                    NSTextField *subviewField = (NSTextField *)subview;
+                    RMGDesktopPicture *deskPicture = [_desktopPictures objectAtIndex:row];
+                    
+                    subviewField.stringValue = [deskPicture pictureName];
+                }
+                else if ([subview.identifier isEqualToString:@"solidColorView"])
                 {
                     RMGDesktopPicture *picture = [_desktopPictures objectAtIndex:row];
                     NSColor *colorForView = picture.solidColor;
@@ -110,13 +120,7 @@
                     RMGSolidColorView *colorView = (RMGSolidColorView *)subview;
                     colorView.solidColor = colorForView;
                 }
-                else if ([subview.identifier isEqualToString:@"pictureName"])
-                {
-                    NSTextField *subviewField = (NSTextField *)subview;
-                    RMGDesktopPicture *deskPicture = [_desktopPictures objectAtIndex:row];
-                    
-                    subviewField.stringValue = [deskPicture pictureName];
-                }
+                
                 else
                 {
                     subview = nil;
@@ -140,6 +144,7 @@
     
     self.detailedCreationDate.objectValue = [displayPicture creationDate];
     self.detailedLastAccessed.objectValue = [displayPicture lastAccessed];
+    self.detailedLastContentModification.objectValue = [displayPicture lastModification];
 }
 
 #pragma mark Class Extension Methods
@@ -149,7 +154,7 @@
     NSMutableArray *pictures = [[NSMutableArray alloc] init];
     NSURL *baseURL = [NSURL fileURLWithPath:@"/Library/Desktop Pictures" isDirectory:YES];
     
-    NSArray *propertyKeys = [NSArray arrayWithObjects:NSURLLocalizedNameKey, NSURLIsDirectoryKey, NSURLCreationDateKey, NSURLContentAccessDateKey, nil];
+    NSArray *propertyKeys = [NSArray arrayWithObjects:NSURLLocalizedNameKey, NSURLIsDirectoryKey, NSURLCreationDateKey, NSURLContentAccessDateKey, NSURLContentModificationDateKey, nil];
     
     NSDirectoryEnumerationOptions enumOpts = NSDirectoryEnumerationSkipsHiddenFiles;
     NSFileManager *fm = [[NSFileManager alloc] init];

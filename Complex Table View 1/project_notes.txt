@@ -40,5 +40,16 @@ actually a directory.  My code did not properly handle this, as it placed within
 subviewField.stringValue (for NSView-based cells) nil.  I placed some code that would
 detect whether the directory entry was a directory or just a file.  This solved the problem.
 
+-------------------
+09.10.2015 - 9:03am
+-------------------
 
+This commit adds some slight modifications to the various files.  This is a good place to save
+before embarking on new ideas.
 
+--------------------
+09.10.2015 - 10:07am
+--------------------
+
+I have just implemented the 'last modification date' property for the detailed portion of the
+master-detail design.  The Lord has blessed me with understanding so I could get this far.
