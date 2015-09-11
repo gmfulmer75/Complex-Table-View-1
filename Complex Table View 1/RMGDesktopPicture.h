@@ -15,13 +15,15 @@
     NSString *_pictureName;
     NSImage *_pictureImage;
     
-    NSColor *_solidColor;
+    NSColor *_currentColor;
+    NSUInteger _colorIndex;
+    
+    NSArray *_solidColors;
     
     NSDate *_creationDate;
     NSDate *_lastAccessed;
     
     NSDate *_lastModification;
-    
     BOOL _isDirectory;
 }
 
@@ -32,10 +34,12 @@
 @property (copy, nonatomic) NSImage *pictureImage;
 
 @property (copy, nonatomic) NSDate *lastModification;
+@property (copy, nonatomic) NSColor *currentColor;
 @property (copy, nonatomic) NSDate *creationDate;
 @property (copy, nonatomic) NSDate *lastAccessed;
-@property (copy, nonatomic) NSColor *solidColor;
 
+@property (nonatomic) NSUInteger colorIndex;
+@property (nonatomic) NSArray *solidColors;
 @property (nonatomic) BOOL isDirectory;
 
 @end

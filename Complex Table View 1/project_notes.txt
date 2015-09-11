@@ -53,3 +53,15 @@ before embarking on new ideas.
 
 I have just implemented the 'last modification date' property for the detailed portion of the
 master-detail design.  The Lord has blessed me with understanding so I could get this far.
+
+-------------------
+09.11.2015 - 9:13am
+-------------------
+
+I have implemented a feature where you can click the plus or minus button and load a random
+color into the RMGSolidColorView object.  The RMGSolidColorView object can be found on the
+second column to the right of the primary desktop picture image.
+
+I have not decided yet whether to use the user defaults controller or implement defaults prog-
+ramatically.  The idea is to save as a default value the number of random colors that each
+desktop picture object can store and recall.

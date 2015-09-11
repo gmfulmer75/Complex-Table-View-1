@@ -18,6 +18,7 @@
                 <outlet property="detailedLastContentModification" destination="bz8-cv-G6Z" id="mbq-U7-Ghw"/>
                 <outlet property="detailedPictName" destination="dfA-yE-pO8" id="tOO-r8-bOb"/>
                 <outlet property="detailedView" destination="PEf-QE-4OH" id="VKL-Pe-ZIA"/>
+                <outlet property="tableView" destination="Rnv-gQ-jrQ" id="B03-wB-Xkq"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -749,7 +750,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <customView identifier="solidColorView" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KsX-fQ-cAk" userLabel="Solid Color View" customClass="RMGSolidColorView">
-                                                            <rect key="frame" x="3" y="3" width="70" height="49"/>
+                                                            <rect key="frame" x="3" y="4" width="70" height="49"/>
                                                         </customView>
                                                         <textField identifier="pictureName" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-9J-5Tw" userLabel="Cell Desc. Textfield">
                                                             <rect key="frame" x="1" y="58" width="109" height="13"/>
@@ -760,18 +761,24 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <button identifier="addButton" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGL-fn-7ur" userLabel="Add Button">
-                                                            <rect key="frame" x="82" y="30" width="22" height="22"/>
+                                                            <rect key="frame" x="82" y="31" width="22" height="22"/>
                                                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o7q-GO-F1w">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="system"/>
                                                             </buttonCell>
+                                                            <connections>
+                                                                <action selector="incrementCurrentColor:" target="Voe-Tx-rLC" id="s9K-3r-3ha"/>
+                                                            </connections>
                                                         </button>
                                                         <button identifier="removeButton" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jyX-y8-sh0" userLabel="Remove Button">
-                                                            <rect key="frame" x="82" y="3" width="22" height="22"/>
+                                                            <rect key="frame" x="82" y="4" width="22" height="22"/>
                                                             <buttonCell key="cell" type="square" title="-" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cek-RN-k7U">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
                                                             </buttonCell>
+                                                            <connections>
+                                                                <action selector="decrementCurrentColor:" target="Voe-Tx-rLC" id="afc-mq-tn8"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <connections>
@@ -847,7 +854,7 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLm-8b-rT9">
                         <rect key="frame" x="261" y="40" width="113" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Last Modification:" id="DIi-gW-NuJ">
-                            <font key="font" metaFont="titleBar" size="12"/>
+                            <font key="font" metaFont="cellTitle"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -863,7 +870,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="448" y="404"/>
+            <point key="canvasLocation" x="374" y="388"/>
         </window>
     </objects>
     <resources>

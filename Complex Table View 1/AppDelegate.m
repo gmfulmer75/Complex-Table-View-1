@@ -13,6 +13,8 @@
 #define SUBVIEWS_SECOND_COLUMN      4
 #define INITIAL_COLOR_CAPACITY      5
 
+#define ARRAY_LOWER_LIMIT           0
+
 @interface AppDelegate ()
 
 - (NSMutableArray *)populateDesktopPictures;
@@ -22,6 +24,7 @@
 @property (weak) IBOutlet NSTextField *detailedCreationDate;
 @property (weak) IBOutlet NSTextField *detailedLastAccessed;
 @property (weak) IBOutlet NSTextField *detailedLastContentModification;
+@property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSWindow *window;
 
 @end
@@ -66,6 +69,51 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
     // Insert code here to tear down your application
+}
+
+#pragma mark Action Methods
+
+- (IBAction)incrementCurrentColor:(NSButton *)sender
+{
+    NSUInteger rowClicked = [self.tableView rowForView:sender];
+    RMGDesktopPicture *currentPicture = [_desktopPictures objectAtIndex:rowClicked];
+    
+    NSUInteger colorIndex = [currentPicture colorIndex];
+    NSUInteger arrayUpperLimit = [[currentPicture solidColors] count] - 1;
+    
+    if (colorIndex < arrayUpperLimit)
+    {
+        colorIndex++;
+        
+        [currentPicture setColorIndex:colorIndex];
+        currentPicture.currentColor = [[currentPicture solidColors] objectAtIndex:colorIndex];
+        
+        NSIndexSet *rowIndexes = [NSIndexSet indexSetWithIndex:rowClicked];
+        NSIndexSet *columnIndexes = [NSIndexSet indexSetWithIndex:1];
+        
+        [self.tableView reloadDataForRowIndexes:rowIndexes columnIndexes:columnIndexes];
+    }
+}
+
+- (IBAction)decrementCurrentColor:(NSButton *)sender
+{
+    NSUInteger rowClicked = [self.tableView rowForView:sender];
+    RMGDesktopPicture *currentPicture = [_desktopPictures objectAtIndex:rowClicked];
+    
+    NSUInteger colorIndex = [currentPicture colorIndex];
+    
+    if (colorIndex > ARRAY_LOWER_LIMIT)
+    {
+        colorIndex--;
+        
+        [currentPicture setColorIndex:colorIndex];
+        currentPicture.currentColor = [[currentPicture solidColors] objectAtIndex:colorIndex];
+        
+        NSIndexSet *rowIndexes = [NSIndexSet indexSetWithIndex:rowClicked];
+        NSIndexSet *columnIndexes = [NSIndexSet indexSetWithIndex:1];
+        
+        [self.tableView reloadDataForRowIndexes:rowIndexes columnIndexes:columnIndexes];
+    }
 }
 
 #pragma mark Table View Data Source Methods
@@ -115,7 +163,7 @@
                 else if ([subview.identifier isEqualToString:@"solidColorView"])
                 {
                     RMGDesktopPicture *picture = [_desktopPictures objectAtIndex:row];
-                    NSColor *colorForView = picture.solidColor;
+                    NSColor *colorForView = picture.currentColor;
                     
                     RMGSolidColorView *colorView = (RMGSolidColorView *)subview;
                     colorView.solidColor = colorForView;

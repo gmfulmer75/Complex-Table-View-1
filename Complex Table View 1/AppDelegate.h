@@ -13,6 +13,9 @@
     NSMutableArray *_desktopPictures;
 }
 
+- (IBAction)incrementCurrentColor:(NSButton *)sender;
+- (IBAction)decrementCurrentColor:(NSButton *)sender;
+
 @property (nonatomic) NSMutableArray *desktopPictures;
 
 @end

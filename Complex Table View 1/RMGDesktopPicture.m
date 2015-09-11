@@ -52,7 +52,15 @@
             self.lastModification = returnedValue;
             
             _pictureImage = [[NSImage alloc] initWithContentsOfURL:pictURL];
-            _solidColor = [self generateRandomColor];
+            NSMutableArray *colors = [[NSMutableArray alloc] init];
+            
+            for (NSUInteger index = 0; index < 5; index++)
+            {
+                [colors addObject:[self generateRandomColor]];
+            }
+            
+            _currentColor = [colors objectAtIndex:0];
+            _solidColors = [colors copy];
         }
     }
     
@@ -75,7 +83,7 @@
 }
 
 @synthesize pictureName = _pictureName, pictureImage = _pictureImage, creationDate = _creationDate;
-@synthesize lastAccessed = _lastAccessed, solidColor = _solidColor, isDirectory = _isDirectory;
-@synthesize lastModification = _lastModification;
+@synthesize lastAccessed = _lastAccessed, currentColor = _currentColor, isDirectory = _isDirectory;
+@synthesize lastModification = _lastModification, colorIndex = _colorIndex, solidColors = _solidColors;
 
 @end
