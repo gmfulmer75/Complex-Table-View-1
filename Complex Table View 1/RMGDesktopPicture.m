@@ -8,6 +8,7 @@
 
 #import "RMGDesktopPicture.h"
 #import "RMGSolidColorView.h"
+#import "RMGConstsTypedef.h"
 
 @interface RMGDesktopPicture ()
 
@@ -52,9 +53,14 @@
             self.lastModification = returnedValue;
             
             _pictureImage = [[NSImage alloc] initWithContentsOfURL:pictURL];
+            NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+            
             NSMutableArray *colors = [[NSMutableArray alloc] init];
             
-            for (NSUInteger index = 0; index < 5; index++)
+            NSNumber *randomColorCount = [standardDefaults objectForKey:RMGRandomColorCountUserDefaultsKey];
+            NSUInteger colorCount = [randomColorCount integerValue];
+            
+            for (NSUInteger index = 0; index < colorCount; index++)
             {
                 [colors addObject:[self generateRandomColor]];
             }

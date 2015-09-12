@@ -8,3 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
+NSString * const RMGRandomColorCountUserDefaultsKey = @"RMGRandomColorCount";

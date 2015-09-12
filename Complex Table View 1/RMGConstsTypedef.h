@@ -8,3 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
+#define DEFAULT_COLOR_COUNT         5
+
+extern NSString * const RMGRandomColorCountUserDefaultsKey;

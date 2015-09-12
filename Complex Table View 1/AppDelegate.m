@@ -9,10 +9,9 @@
 #import "AppDelegate.h"
 #import "RMGSolidColorView.h"
 #import "RMGDesktopPicture.h"
+#import "RMGConstsTypedef.h"
 
 #define SUBVIEWS_SECOND_COLUMN      4
-#define INITIAL_COLOR_CAPACITY      5
-
 #define ARRAY_LOWER_LIMIT           0
 
 @interface AppDelegate ()
@@ -36,6 +35,13 @@
 + (void)initialize
 {
     srandom((unsigned int)time(NULL));
+    NSMutableDictionary *defaultsAsDict = [NSMutableDictionary dictionary];
+    
+    [defaultsAsDict setObject:[NSNumber numberWithInteger:DEFAULT_COLOR_COUNT]
+                       forKey:RMGRandomColorCountUserDefaultsKey];
+    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults registerDefaults:defaultsAsDict];
 }
 
 #pragma mark Initializers

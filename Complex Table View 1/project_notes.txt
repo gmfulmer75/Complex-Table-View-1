@@ -65,3 +65,13 @@ second column to the right of the primary desktop picture image.
 I have not decided yet whether to use the user defaults controller or implement defaults prog-
 ramatically.  The idea is to save as a default value the number of random colors that each
 desktop picture object can store and recall.
+
+I have added these files to handle user defaults, error constants, and various typedefs for the program.
+
+-------------------
+09.12.2015 - 9:00am
+-------------------
+
+I am commiting two sessions.  The first is for the random color cache implementation; the other is to
+update the project file and info.plist.  I have added a temporary icon to the project.
+
