@@ -8,13 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class RMGPrefsWinController;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate>
 {
     NSMutableArray *_desktopPictures;
+    RMGPrefsWinController *_preferencesController;
 }
 
 - (IBAction)incrementCurrentColor:(NSButton *)sender;
 - (IBAction)decrementCurrentColor:(NSButton *)sender;
+- (IBAction)openPreferencesPanel:(NSMenuItem *)sender;
 
 @property (nonatomic) NSMutableArray *desktopPictures;
 

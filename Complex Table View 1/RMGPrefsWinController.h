@@ -8,6 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class AppDelegate;
+
 @interface RMGPrefsWinController : NSWindowController
+{
+    AppDelegate __weak *_appDelegate;
+}
+
+@property (weak) AppDelegate *appDelegate; // Outlet established programmatically.
 
 @end

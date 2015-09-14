@@ -75,3 +75,14 @@ I have added these files to handle user defaults, error constants, and various t
 I am commiting two sessions.  The first is for the random color cache implementation; the other is to
 update the project file and info.plist.  I have added a temporary icon to the project.
 
+I have added the suite of files for the preferences panel.
+I have changed the preference's window to NSPanel.
+
+--------------------
+09.14.2015 - 12:59pm
+--------------------
+
+I have added the preferences panel and its first option (have not wired-up the option yet).  I wanted to
+commit this before pursuing the implementation of the preferences.  (Part of this is because I am still
+testing ideas for the project that will use the preferences feature.)
+

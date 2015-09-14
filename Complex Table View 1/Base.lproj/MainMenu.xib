@@ -46,7 +46,11 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <connections>
+                                    <action selector="openPreferencesPanel:" target="Voe-Tx-rLC" id="RxB-Kk-gUp"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -870,7 +874,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="374" y="388"/>
+            <point key="canvasLocation" x="357" y="392"/>
         </window>
     </objects>
     <resources>

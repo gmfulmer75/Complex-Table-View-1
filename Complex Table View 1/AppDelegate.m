@@ -6,10 +6,11 @@
 //  Copyright © 2015 RavenWorks Media Group, L.L.C. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "RMGPrefsWinController.h"
 #import "RMGSolidColorView.h"
 #import "RMGDesktopPicture.h"
 #import "RMGConstsTypedef.h"
+#import "AppDelegate.h"
 
 #define SUBVIEWS_SECOND_COLUMN      4
 #define ARRAY_LOWER_LIMIT           0
@@ -120,6 +121,16 @@
         
         [self.tableView reloadDataForRowIndexes:rowIndexes columnIndexes:columnIndexes];
     }
+}
+
+- (IBAction)openPreferencesPanel:(NSMenuItem *)sender
+{
+    if (!_preferencesController)
+    {
+        _preferencesController = [[RMGPrefsWinController alloc] initWithWindowNibName:@"RMGPrefsWinController"];
+    }
+    
+    [_preferencesController showWindow:self];
 }
 
 #pragma mark Table View Data Source Methods
