@@ -13,8 +13,14 @@
 @interface RMGPrefsWinController : NSWindowController
 {
     AppDelegate __weak *_appDelegate;
+    NSInteger _colorCountDelta;
 }
 
+- (IBAction)changeRandomColorCount:(NSTextField *)sender;
+- (IBAction)executeMakeActive:(NSButton *)sender;
+
+
 @property (weak) AppDelegate *appDelegate; // Outlet established programmatically.
+@property (nonatomic) NSInteger colorCountDelta;
 
 @end

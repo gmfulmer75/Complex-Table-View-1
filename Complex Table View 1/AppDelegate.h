@@ -20,6 +20,8 @@
 - (IBAction)decrementCurrentColor:(NSButton *)sender;
 - (IBAction)openPreferencesPanel:(NSMenuItem *)sender;
 
+- (void)adjustDesktopPicturesColorsWithChange:(NSInteger)changeDelta;
+
 @property (nonatomic) NSMutableArray *desktopPictures;
 
 @end

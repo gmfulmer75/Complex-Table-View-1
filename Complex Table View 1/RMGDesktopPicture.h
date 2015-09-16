@@ -30,6 +30,8 @@
 + (RMGDesktopPicture *)desktopPictureWithURL:(NSURL *)pictURL;
 - (RMGDesktopPicture *)initWithURL:(NSURL *)pictURL;
 
+- (void)adjustSolidColorsWithChange:(NSInteger)changeDelta;
+
 @property (copy, nonatomic) NSString *pictureName;
 @property (copy, nonatomic) NSImage *pictureImage;
 

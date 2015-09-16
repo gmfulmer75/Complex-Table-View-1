@@ -13,7 +13,10 @@
 #import "AppDelegate.h"
 
 #define SUBVIEWS_SECOND_COLUMN      4
+#define DEFAULT_COLOR_COUNT         5
 #define ARRAY_LOWER_LIMIT           0
+
+#define TOTAL_PICTURE_COUNT         49
 
 @interface AppDelegate ()
 
@@ -39,7 +42,7 @@
     NSMutableDictionary *defaultsAsDict = [NSMutableDictionary dictionary];
     
     [defaultsAsDict setObject:[NSNumber numberWithInteger:DEFAULT_COLOR_COUNT]
-                       forKey:RMGRandomColorCountUserDefaultsKey];
+                       forKey:RMGRandomColorCacheCountUserDefaultsKey];
     
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     [standardDefaults registerDefaults:defaultsAsDict];
@@ -64,7 +67,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     RMGDesktopPicture *displayPicture = [_desktopPictures objectAtIndex:0];
-    
+
     self.detailedView.image = [displayPicture pictureImage];
     self.detailedPictName.stringValue = [displayPicture pictureName];
     
@@ -128,9 +131,23 @@
     if (!_preferencesController)
     {
         _preferencesController = [[RMGPrefsWinController alloc] initWithWindowNibName:@"RMGPrefsWinController"];
+        [_preferencesController setAppDelegate:self];
     }
     
     [_preferencesController showWindow:self];
+}
+
+#pragma mark General Functionality
+
+- (void)adjustDesktopPicturesColorsWithChange:(NSInteger)changeDelta
+{
+    RMGDesktopPicture *picture;
+    
+    for (NSUInteger index = 0; index < TOTAL_PICTURE_COUNT; index++)
+    {
+        picture = [_desktopPictures objectAtIndex:index];
+        [picture adjustSolidColorsWithChange:changeDelta];
+    }
 }
 
 #pragma mark Table View Data Source Methods

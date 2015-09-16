@@ -10,6 +10,7 @@
 #import "RMGSolidColorView.h"
 #import "RMGConstsTypedef.h"
 
+
 @interface RMGDesktopPicture ()
 
 - (NSColor *)generateRandomColor;
@@ -57,7 +58,7 @@
             
             NSMutableArray *colors = [[NSMutableArray alloc] init];
             
-            NSNumber *randomColorCount = [standardDefaults objectForKey:RMGRandomColorCountUserDefaultsKey];
+            NSNumber *randomColorCount = [standardDefaults objectForKey:RMGRandomColorCacheCountUserDefaultsKey];
             NSUInteger colorCount = [randomColorCount integerValue];
             
             for (NSUInteger index = 0; index < colorCount; index++)
@@ -71,6 +72,32 @@
     }
     
     return self;
+}
+
+#pragma mark General Functionality
+
+- (void)adjustSolidColorsWithChange:(NSInteger)changeDelta
+{
+    NSMutableArray *colorsToAdd = [[NSMutableArray alloc] init];
+    
+    if (changeDelta > 0)
+    {
+        do {
+            
+            [colorsToAdd addObject:[self generateRandomColor]];
+            changeDelta--;
+            
+        } while (changeDelta > 0);
+        
+        _solidColors = [_solidColors arrayByAddingObjectsFromArray:colorsToAdd];
+    }
+    else if (changeDelta < 0)
+    {
+        NSRange reducedRange = NSMakeRange(0, [_solidColors count] + changeDelta);
+        _solidColors = [_solidColors subarrayWithRange:reducedRange];
+    }
+    
+    [self setColorIndex:0];
 }
 
 #pragma mark Class Extension Methods

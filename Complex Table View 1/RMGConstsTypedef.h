@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define DEFAULT_COLOR_COUNT         5
+#define MAX_COLOR_COUNT         15
+#define MIN_COLOR_COUNT         1
 
-extern NSString * const RMGRandomColorCountUserDefaultsKey;
+extern NSString * const RMGRandomColorCacheCountUserDefaultsKey;
