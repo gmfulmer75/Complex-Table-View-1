@@ -7,17 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195F60AF1BAB0A15005B214B /* RMGMainDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 195F60AE1BAB0A15005B214B /* RMGMainDisplayView.m */; };
+		196682B81BA468BD0059A1AD /* RMGPrefsWinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196682B61BA468BD0059A1AD /* RMGPrefsWinController.m */; };
+		196682B91BA468BD0059A1AD /* RMGPrefsWinController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196682B71BA468BD0059A1AD /* RMGPrefsWinController.xib */; };
 		19762A0D1B9A184E00C8B0AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19762A0C1B9A184E00C8B0AA /* AppDelegate.m */; };
 		19762A101B9A184E00C8B0AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19762A0F1B9A184E00C8B0AA /* main.m */; };
 		19762A121B9A184E00C8B0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19762A111B9A184E00C8B0AA /* Assets.xcassets */; };
 		19762A151B9A184E00C8B0AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19762A131B9A184E00C8B0AA /* MainMenu.xib */; };
-		19762A221B9A21C500C8B0AA /* RMGSolidColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19762A211B9A21C500C8B0AA /* RMGSolidColorView.m */; settings = {ASSET_TAGS = (); }; };
-		19762A241B9A230F00C8B0AA /* project_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19762A231B9A230F00C8B0AA /* project_notes.txt */; settings = {ASSET_TAGS = (); }; };
-		19828DBF1BA31C5200FE0319 /* RMGConstsTypedef.m in Sources */ = {isa = PBXBuildFile; fileRef = 19828DBE1BA31C5200FE0319 /* RMGConstsTypedef.m */; settings = {ASSET_TAGS = (); }; };
-		19F65D3C1B9B1AF500712769 /* RMGDesktopPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F65D3B1B9B1AF500712769 /* RMGDesktopPicture.m */; settings = {ASSET_TAGS = (); }; };
+		19762A221B9A21C500C8B0AA /* RMGSolidColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19762A211B9A21C500C8B0AA /* RMGSolidColorView.m */; };
+		19762A241B9A230F00C8B0AA /* project_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19762A231B9A230F00C8B0AA /* project_notes.txt */; };
+		19828DBF1BA31C5200FE0319 /* RMGConstsTypedef.m in Sources */ = {isa = PBXBuildFile; fileRef = 19828DBE1BA31C5200FE0319 /* RMGConstsTypedef.m */; };
+		198625211BB05F9400DC977C /* RMGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 198625201BB05F9400DC977C /* RMGPictureView.m */; };
+		19F65D3C1B9B1AF500712769 /* RMGDesktopPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F65D3B1B9B1AF500712769 /* RMGDesktopPicture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		195F60AD1BAB0A15005B214B /* RMGMainDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGMainDisplayView.h; sourceTree = "<group>"; };
+		195F60AE1BAB0A15005B214B /* RMGMainDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGMainDisplayView.m; sourceTree = "<group>"; };
+		196682B51BA468BD0059A1AD /* RMGPrefsWinController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGPrefsWinController.h; sourceTree = "<group>"; };
+		196682B61BA468BD0059A1AD /* RMGPrefsWinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGPrefsWinController.m; sourceTree = "<group>"; };
+		196682B71BA468BD0059A1AD /* RMGPrefsWinController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMGPrefsWinController.xib; sourceTree = "<group>"; };
 		19762A081B9A184E00C8B0AA /* Complex Table View 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Complex Table View 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19762A0B1B9A184E00C8B0AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19762A0C1B9A184E00C8B0AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -30,6 +39,8 @@
 		19762A231B9A230F00C8B0AA /* project_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = project_notes.txt; sourceTree = "<group>"; };
 		19828DBD1BA31C5200FE0319 /* RMGConstsTypedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGConstsTypedef.h; sourceTree = "<group>"; };
 		19828DBE1BA31C5200FE0319 /* RMGConstsTypedef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGConstsTypedef.m; sourceTree = "<group>"; };
+		1986251F1BB05F9400DC977C /* RMGPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGPictureView.h; sourceTree = "<group>"; };
+		198625201BB05F9400DC977C /* RMGPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGPictureView.m; sourceTree = "<group>"; };
 		19F65D3A1B9B1AF500712769 /* RMGDesktopPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGDesktopPicture.h; sourceTree = "<group>"; };
 		19F65D3B1B9B1AF500712769 /* RMGDesktopPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGDesktopPicture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,12 +75,10 @@
 		19762A0A1B9A184E00C8B0AA /* Complex Table View 1 */ = {
 			isa = PBXGroup;
 			children = (
-				19762A0B1B9A184E00C8B0AA /* AppDelegate.h */,
-				19762A0C1B9A184E00C8B0AA /* AppDelegate.m */,
+				19762A1F1B9A219B00C8B0AA /* Classes */,
 				19F65D3D1B9B1B4C00712769 /* XIB Files */,
 				19762A161B9A184E00C8B0AA /* Info.plist */,
 				19762A0E1B9A184E00C8B0AA /* Supporting Files */,
-				19762A1F1B9A219B00C8B0AA /* Classes */,
 			);
 			path = "Complex Table View 1";
 			sourceTree = "<group>";
@@ -98,6 +107,10 @@
 			children = (
 				19762A201B9A21C500C8B0AA /* RMGSolidColorView.h */,
 				19762A211B9A21C500C8B0AA /* RMGSolidColorView.m */,
+				195F60AD1BAB0A15005B214B /* RMGMainDisplayView.h */,
+				195F60AE1BAB0A15005B214B /* RMGMainDisplayView.m */,
+				1986251F1BB05F9400DC977C /* RMGPictureView.h */,
+				198625201BB05F9400DC977C /* RMGPictureView.m */,
 			);
 			name = "View Classes";
 			sourceTree = "<group>";
@@ -105,6 +118,10 @@
 		19762A1E1B9A217500C8B0AA /* Controller Classes */ = {
 			isa = PBXGroup;
 			children = (
+				19762A0B1B9A184E00C8B0AA /* AppDelegate.h */,
+				19762A0C1B9A184E00C8B0AA /* AppDelegate.m */,
+				196682B51BA468BD0059A1AD /* RMGPrefsWinController.h */,
+				196682B61BA468BD0059A1AD /* RMGPrefsWinController.m */,
 			);
 			name = "Controller Classes";
 			sourceTree = "<group>";
@@ -133,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				19762A131B9A184E00C8B0AA /* MainMenu.xib */,
+				196682B71BA468BD0059A1AD /* RMGPrefsWinController.xib */,
 			);
 			name = "XIB Files";
 			sourceTree = "<group>";
@@ -197,6 +215,7 @@
 			files = (
 				19762A121B9A184E00C8B0AA /* Assets.xcassets in Resources */,
 				19762A151B9A184E00C8B0AA /* MainMenu.xib in Resources */,
+				196682B91BA468BD0059A1AD /* RMGPrefsWinController.xib in Resources */,
 				19762A241B9A230F00C8B0AA /* project_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198625211BB05F9400DC977C /* RMGPictureView.m in Sources */,
 				19762A101B9A184E00C8B0AA /* main.m in Sources */,
+				195F60AF1BAB0A15005B214B /* RMGMainDisplayView.m in Sources */,
 				19762A221B9A21C500C8B0AA /* RMGSolidColorView.m in Sources */,
+				196682B81BA468BD0059A1AD /* RMGPrefsWinController.m in Sources */,
 				19F65D3C1B9B1AF500712769 /* RMGDesktopPicture.m in Sources */,
 				19828DBF1BA31C5200FE0319 /* RMGConstsTypedef.m in Sources */,
 				19762A0D1B9A184E00C8B0AA /* AppDelegate.m in Sources */,
