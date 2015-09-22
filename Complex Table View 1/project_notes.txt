@@ -114,3 +114,6 @@ in a secure state before implementing drag and drop.  Because I have not worked 
 drop I need a safe secure set of files to be committed in case I need to re-do the feature using information
 from an outside source.
 
+I have committed the .xcodeproj file to get it up to date for drag and drop.
+
+I am making one more commit.  I trimmed off some straggler code and made a small edit to the MainMenu.xib file.

@@ -201,8 +201,6 @@
                     
                     RMGSolidColorView *colorView = (RMGSolidColorView *)subview;
                     colorView.solidColor = colorForView;
-                    
-                    colorView.picture = picture;
                 }
                 
                 else
