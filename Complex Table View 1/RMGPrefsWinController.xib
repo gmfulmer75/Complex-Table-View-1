@@ -57,7 +57,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="IHR-Mv-phX"/>
             </connections>
-            <point key="canvasLocation" x="536" y="623.5"/>
+            <point key="canvasLocation" x="586" y="785.5"/>
         </window>
     </objects>
 </document>

@@ -9,3 +9,7 @@
 #import <Foundation/Foundation.h>
 
 NSString * const RMGRandomColorCacheCountUserDefaultsKey = @"RMGRandomColorCacheCount";
+
+#pragma mark UTI Definitions
+
+NSString * const RMGDesktopPictureUTI = @"com.ravenworksmediagroup.type.desktopPicture";

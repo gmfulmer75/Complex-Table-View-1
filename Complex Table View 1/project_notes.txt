@@ -86,3 +86,31 @@ I have added the preferences panel and its first option (have not wired-up the o
 commit this before pursuing the implementation of the preferences.  (Part of this is because I am still
 testing ideas for the project that will use the preferences feature.)
 
+-------------------
+09.16.2015 - 9:51am
+-------------------
+
+This commit finishes the random color cache count implementation.
+
+-------------------
+09.17.2015 - 9:49am
+-------------------
+
+I have added the RMGMainDisplayView class files to implement drag and drop with a standard
+NSImageView instance.
+
+--------------------
+09.21.2015 - 10:54am
+--------------------
+
+I have added the RMGPictureView class files for use in the drag and drop feature.
+
+-------------------
+09.22.2015 - 8:55am
+-------------------
+
+I am saving little odds and ends for all modified files.  The modifications are to place the program files
+in a secure state before implementing drag and drop.  Because I have not worked extensively with drag and
+drop I need a safe secure set of files to be committed in case I need to re-do the feature using information
+from an outside source.
+

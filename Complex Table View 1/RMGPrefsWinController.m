@@ -48,7 +48,7 @@
     if (enteredColorCount > MAX_COLOR_COUNT)
     {
         NSAlert *alertToRun = [[NSAlert alloc] init];
-        [alertToRun setMessageText:@"Error: Maximum of 15 exceeded."];
+        [alertToRun setMessageText:@"Error: Maximum of 15 items exceeded."];
         
         [alertToRun runModal];
         
@@ -58,7 +58,7 @@
     else if (enteredColorCount < MIN_COLOR_COUNT)
     {
         NSAlert *alertToRun = [[NSAlert alloc] init];
-        [alertToRun setMessageText:@"Error: Minimum of 1 not met."];
+        [alertToRun setMessageText:@"Error: cache must have one or more items."];
         
         [alertToRun runModal];
         

@@ -815,11 +815,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="PEf-QE-4OH">
-                        <rect key="frame" x="260" y="154" width="348" height="196"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="iXd-7X-Umb"/>
-                    </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="RO8-J4-J7s">
                         <rect key="frame" x="373" y="70" width="76" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -886,9 +881,14 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="PEf-QE-4OH" customClass="RMGMainDisplayView">
+                        <rect key="frame" x="260" y="154" width="348" height="196"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="iXd-7X-Umb"/>
+                    </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="367" y="328"/>
+            <point key="canvasLocation" x="406" y="381"/>
         </window>
     </objects>
     <resources>

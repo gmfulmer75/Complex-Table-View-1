@@ -10,7 +10,7 @@
 
 @class RMGSolidColorView;
 
-@interface RMGDesktopPicture : NSObject
+@interface RMGDesktopPicture : NSObject <NSCoding>
 {
     NSString *_pictureName;
     NSImage *_pictureImage;

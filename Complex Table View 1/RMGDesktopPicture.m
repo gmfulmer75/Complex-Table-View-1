@@ -100,6 +100,53 @@
     [self setColorIndex:0];
 }
 
+#pragma mark NSCoding Protocol Methods
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:_lastModification forKey:@"lastModification"];
+    [aCoder encodeObject:_pictureImage forKey:@"pictureImage"];
+    [aCoder encodeObject:_lastAccessed forKey:@"lastAccessed"];
+    [aCoder encodeObject:_currentColor forKey:@"currentColor"];
+    [aCoder encodeObject:_creationDate forKey:@"creationDate"];
+    [aCoder encodeObject:_pictureName forKey:@"pictureName"];
+    [aCoder encodeObject:_solidColors forKey:@"solidColors"];
+    [aCoder encodeInteger:_colorIndex forKey:@"colorIndex"];
+    [aCoder encodeBool:_isDirectory forKey:@"isDirectory"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    
+    if (self)
+    {
+        _lastModification = [aDecoder decodeObjectForKey:@"lastModification"];
+        _pictureImage = [aDecoder decodeObjectForKey:@"pictureImage"];
+        _lastAccessed = [aDecoder decodeObjectForKey:@"lastAccessed"];
+        _currentColor = [aDecoder decodeObjectForKey:@"currentColor"];
+        _creationDate = [aDecoder decodeObjectForKey:@"creationDate"];
+        _pictureName = [aDecoder decodeObjectForKey:@"pictureName"];
+        _solidColors = [aDecoder decodeObjectForKey:@"solidColors"];
+        _colorIndex = [aDecoder decodeIntegerForKey:@"colorIndex"];
+        _isDirectory = [aDecoder decodeBoolForKey:@"isDirectory"];
+    }
+    
+    return self;
+}
+
+#pragma mark NSPasteboardWriting Protocol Methods
+
+- (NSArray *)writableTypesForPasteboard:(NSPasteboard *)pasteboard
+{
+    return nil;
+}
+
+- (id)pasteboardPropertyListForType:(NSString *)type
+{
+    return nil;
+}
+
 #pragma mark Class Extension Methods
 
 - (NSColor *)generateRandomColor

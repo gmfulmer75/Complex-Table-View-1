@@ -12,3 +12,7 @@
 #define MIN_COLOR_COUNT         1
 
 extern NSString * const RMGRandomColorCacheCountUserDefaultsKey;
+
+#pragma mark UTI Declarations
+
+extern NSString * const RMGDesktopPictureUTI;
