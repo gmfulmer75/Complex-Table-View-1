@@ -67,7 +67,7 @@
             }
             
             _currentColor = [colors objectAtIndex:0];
-            _solidColors = [colors copy];
+            _solidColors = colors;
         }
     }
     
@@ -135,16 +135,36 @@
     return self;
 }
 
+#pragma mark NSPasteboardReading Protocol Methods
+
++ (NSArray *)readableTypesForPasteboard:(NSPasteboard *)pasteboard
+{
+    NSArray *singleType = [NSArray arrayWithObject:RMGDesktopPictureUTI];
+    return singleType;
+}
+
++ (NSPasteboardReadingOptions)readingOptionsForType:(NSString *)type pasteboard:(NSPasteboard *)pasteboard
+{
+    if ([type isEqualToString:RMGDesktopPictureUTI])
+    {
+        return NSPasteboardReadingAsKeyedArchive;
+    }
+    
+    return NSPasteboardReadingAsData;
+}
+
 #pragma mark NSPasteboardWriting Protocol Methods
 
 - (NSArray *)writableTypesForPasteboard:(NSPasteboard *)pasteboard
 {
-    return nil;
+    NSArray *singleType = [NSArray arrayWithObject:RMGDesktopPictureUTI];
+    return singleType;
 }
 
 - (id)pasteboardPropertyListForType:(NSString *)type
 {
-    return nil;
+    NSData *pictureAsData = [NSKeyedArchiver archivedDataWithRootObject:self];
+    return pictureAsData;
 }
 
 #pragma mark Class Extension Methods

@@ -8,6 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RMGPictureView : NSImageView
+@interface RMGPictureView : NSImageView <NSDraggingSource>
+{
+    NSImage *_picture;
+    NSDraggingSession *_dragSession;
+}
+
+@property (copy, nonatomic) NSImage *picture;
+@property (nonatomic) NSDraggingSession *dragSession;
 
 @end
