@@ -10,6 +10,7 @@
 #import "RMGSolidColorView.h"
 #import "RMGDesktopPicture.h"
 #import "RMGConstsTypedef.h"
+#import "RMGPictureView.h"
 #import "AppDelegate.h"
 
 #define SUBVIEWS_SECOND_COLUMN      4
@@ -27,7 +28,6 @@
 @property (weak) IBOutlet NSTextField *detailedCreationDate;
 @property (weak) IBOutlet NSTextField *detailedLastAccessed;
 @property (weak) IBOutlet NSTextField *detailedLastContentModification;
-@property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSWindow *window;
 
 @end
@@ -173,7 +173,7 @@
         
         if ([columnIdent isEqualToString:@"desktopPictures"])
         {
-            NSImageView *pictImageView = cellViewSubviews[0];
+            RMGPictureView *pictImageView = cellViewSubviews[0];
             RMGDesktopPicture *pictureObject = [_desktopPictures objectAtIndex:row];
             
             NSImage *imageToDisplay = [pictureObject pictureImage];
@@ -257,6 +257,6 @@
     return [pictures copy];
 }
 
-@synthesize desktopPictures = _desktopPictures;
+@synthesize desktopPictures = _desktopPictures, tableView = _tableView;
 
 @end

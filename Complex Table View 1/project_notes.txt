@@ -117,3 +117,11 @@ from an outside source.
 I have committed the .xcodeproj file to get it up to date for drag and drop.
 
 I am making one more commit.  I trimmed off some straggler code and made a small edit to the MainMenu.xib file.
+
+-------------------
+10.01.2015 - 1:29pm
+-------------------
+
+I have subclassed NSTableView (RMGTableView) to pass mouse events to the RMGPictureView instances.  If this is
+not done then the picture view does not receive mouse-down events and drag and drop will not work for the
+picture view objects.

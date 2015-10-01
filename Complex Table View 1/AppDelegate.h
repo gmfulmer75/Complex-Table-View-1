@@ -23,6 +23,7 @@
 - (void)adjustDesktopPicturesColorsWithChange:(NSInteger)changeDelta;
 
 @property (nonatomic) NSMutableArray *desktopPictures;
+@property (weak) IBOutlet NSTableView *tableView;
 
 @end
 

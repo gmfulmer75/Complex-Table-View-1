@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RMGMainDisplayView : NSImageView
+@interface RMGMainDisplayView : NSImageView <NSDraggingDestination>
 
 @end
