@@ -21,6 +21,7 @@
 - (IBAction)openPreferencesPanel:(NSMenuItem *)sender;
 
 - (void)adjustDesktopPicturesColorsWithChange:(NSInteger)changeDelta;
+- (void)setUpDetailedViewInfo:(RMGDesktopPicture *)picture;
 
 @property (nonatomic) NSMutableArray *desktopPictures;
 @property (weak) IBOutlet NSTableView *tableView;

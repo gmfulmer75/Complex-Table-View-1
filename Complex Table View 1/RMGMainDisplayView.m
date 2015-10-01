@@ -9,6 +9,13 @@
 #import "RMGMainDisplayView.h"
 #import "RMGDesktopPicture.h"
 #import "RMGConstsTypedef.h"
+#import "AppDelegate.h"
+
+@interface RMGMainDisplayView ()
+
+@property (weak) IBOutlet AppDelegate *appDelegate;
+
+@end
 
 @implementation RMGMainDisplayView
 
@@ -52,6 +59,7 @@
     RMGDesktopPicture *picture = [NSKeyedUnarchiver unarchiveObjectWithData:pictureAsData];
     self.image = picture.pictureImage;
     
+    [self.appDelegate setUpDetailedViewInfo:picture];
     return YES;
 }
 

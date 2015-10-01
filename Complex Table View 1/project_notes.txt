@@ -125,3 +125,7 @@ I am making one more commit.  I trimmed off some straggler code and made a small
 I have subclassed NSTableView (RMGTableView) to pass mouse events to the RMGPictureView instances.  If this is
 not done then the picture view does not receive mouse-down events and drag and drop will not work for the
 picture view objects.
+
+There was a problem with the detailed view's information when performing drag and drop with the desktop picture.
+The dropped desktop picture appears in the detailed view but the information (like the picture name, etc.) was
+not updating.  This is a classic case of a key-value coding issue.

@@ -150,6 +150,14 @@
     }
 }
 
+- (void)setUpDetailedViewInfo:(RMGDesktopPicture *)picture
+{
+    self.detailedPictName.stringValue = picture.pictureName;
+    self.detailedCreationDate.objectValue = picture.creationDate;
+    self.detailedLastAccessed.objectValue = picture.lastAccessed;
+    self.detailedLastContentModification.objectValue = picture.lastModification;
+}
+
 #pragma mark Table View Data Source Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
