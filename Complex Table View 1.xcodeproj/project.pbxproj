@@ -18,6 +18,8 @@
 		19762A241B9A230F00C8B0AA /* project_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19762A231B9A230F00C8B0AA /* project_notes.txt */; };
 		19828DBF1BA31C5200FE0319 /* RMGConstsTypedef.m in Sources */ = {isa = PBXBuildFile; fileRef = 19828DBE1BA31C5200FE0319 /* RMGConstsTypedef.m */; };
 		198625211BB05F9400DC977C /* RMGPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 198625201BB05F9400DC977C /* RMGPictureView.m */; };
+		1999A2341BBDB05B00C9B1E9 /* RMGTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1999A2331BBDB05B00C9B1E9 /* RMGTableView.m */; };
+		19C961B01BBF04F700FE2DC1 /* RMGOutlineWinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C961AE1BBF04F700FE2DC1 /* RMGOutlineWinController.m */; };
 		19F65D3C1B9B1AF500712769 /* RMGDesktopPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F65D3B1B9B1AF500712769 /* RMGDesktopPicture.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,10 @@
 		19828DBE1BA31C5200FE0319 /* RMGConstsTypedef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGConstsTypedef.m; sourceTree = "<group>"; };
 		1986251F1BB05F9400DC977C /* RMGPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGPictureView.h; sourceTree = "<group>"; };
 		198625201BB05F9400DC977C /* RMGPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGPictureView.m; sourceTree = "<group>"; };
+		1999A2321BBDB05B00C9B1E9 /* RMGTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGTableView.h; sourceTree = "<group>"; };
+		1999A2331BBDB05B00C9B1E9 /* RMGTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGTableView.m; sourceTree = "<group>"; };
+		19C961AD1BBF04F700FE2DC1 /* RMGOutlineWinController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGOutlineWinController.h; sourceTree = "<group>"; };
+		19C961AE1BBF04F700FE2DC1 /* RMGOutlineWinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGOutlineWinController.m; sourceTree = "<group>"; };
 		19F65D3A1B9B1AF500712769 /* RMGDesktopPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGDesktopPicture.h; sourceTree = "<group>"; };
 		19F65D3B1B9B1AF500712769 /* RMGDesktopPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGDesktopPicture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +128,10 @@
 				19762A0C1B9A184E00C8B0AA /* AppDelegate.m */,
 				196682B51BA468BD0059A1AD /* RMGPrefsWinController.h */,
 				196682B61BA468BD0059A1AD /* RMGPrefsWinController.m */,
+				1999A2321BBDB05B00C9B1E9 /* RMGTableView.h */,
+				1999A2331BBDB05B00C9B1E9 /* RMGTableView.m */,
+				19C961AD1BBF04F700FE2DC1 /* RMGOutlineWinController.h */,
+				19C961AE1BBF04F700FE2DC1 /* RMGOutlineWinController.m */,
 			);
 			name = "Controller Classes";
 			sourceTree = "<group>";
@@ -233,8 +243,10 @@
 				19762A221B9A21C500C8B0AA /* RMGSolidColorView.m in Sources */,
 				196682B81BA468BD0059A1AD /* RMGPrefsWinController.m in Sources */,
 				19F65D3C1B9B1AF500712769 /* RMGDesktopPicture.m in Sources */,
+				19C961B01BBF04F700FE2DC1 /* RMGOutlineWinController.m in Sources */,
 				19828DBF1BA31C5200FE0319 /* RMGConstsTypedef.m in Sources */,
 				19762A0D1B9A184E00C8B0AA /* AppDelegate.m in Sources */,
+				1999A2341BBDB05B00C9B1E9 /* RMGTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +350,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Complex Table View 1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ravenworksmediagroup.Complex-Table-View-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -350,6 +363,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Complex Table View 1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ravenworksmediagroup.Complex-Table-View-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
