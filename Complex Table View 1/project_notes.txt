@@ -129,3 +129,11 @@ picture view objects.
 There was a problem with the detailed view's information when performing drag and drop with the desktop picture.
 The dropped desktop picture appears in the detailed view but the information (like the picture name, etc.) was
 not updating.  This is a classic case of a key-value coding issue.
+
+-------------------
+10.02.2015 - 1:34pm
+-------------------
+
+I have added the NSOutlineView window controller (with XIB) to implement drag and drop for the outline view.
+
+The project is finished.

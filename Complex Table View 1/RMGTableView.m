@@ -18,8 +18,10 @@
 - (BOOL)validateProposedFirstResponder:(NSResponder *)responder forEvent:(NSEvent *)event
 {
     NSView *responderView = (NSView *)responder;
+    NSString *identifier = [responderView identifier];
     
-    if ([[responderView identifier] isEqualToString:@"deskPict"])
+    if ([identifier isEqualToString:@"deskPict"] || [identifier isEqualToString:@"addButton"] ||
+        [identifier isEqualToString:@"removeButton"])
     {
         return YES;
     }

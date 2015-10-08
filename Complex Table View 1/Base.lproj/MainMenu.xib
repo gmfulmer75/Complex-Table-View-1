@@ -832,9 +832,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="iXd-7X-Umb"/>
+                        <connections>
+                            <outlet property="appDelegate" destination="Voe-Tx-rLC" id="Yzc-95-Tqb"/>
+                        </connections>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="RO8-J4-J7s">
-                        <rect key="frame" x="372" y="97" width="76" height="17"/>
+                        <rect key="frame" x="359" y="89" width="51" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="iXV-af-hQh">
@@ -844,19 +847,8 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="YSq-ER-eGp">
-                        <rect key="frame" x="372" y="72" width="76" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="WFL-dO-iOl">
-                            <dateFormatter key="formatter" dateStyle="short" id="1nY-NX-kNO"/>
-                            <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="wE1-ge-oHG">
-                        <rect key="frame" x="260" y="72" width="99" height="17"/>
+                        <rect key="frame" x="446" y="89" width="99" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Last Accessed:" id="0EK-uQ-SD9">
@@ -866,7 +858,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="r7H-Li-euX">
-                        <rect key="frame" x="260" y="97" width="87" height="17"/>
+                        <rect key="frame" x="277" y="89" width="87" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Creation Date:" id="Sff-eb-KJq">
@@ -876,17 +868,17 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="dfA-yE-pO8">
-                        <rect key="frame" x="258" y="122" width="349" height="18"/>
+                        <rect key="frame" x="277" y="108" width="333" height="38"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Picture Name" id="Mj0-0p-88Y">
-                            <font key="font" size="16" name="Herculanum"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Picture Name" id="Mj0-0p-88Y">
+                            <font key="font" size="21" name="BanglaMN"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="aLm-8b-rT9">
-                        <rect key="frame" x="260" y="47" width="113" height="17"/>
+                        <rect key="frame" x="277" y="64" width="113" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Last Modification:" id="DIi-gW-NuJ">
@@ -896,7 +888,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bz8-cv-G6Z">
-                        <rect key="frame" x="372" y="47" width="76" height="17"/>
+                        <rect key="frame" x="381" y="64" width="76" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <animations/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="K86-yd-bQn">
@@ -906,10 +898,21 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="YSq-ER-eGp">
+                        <rect key="frame" x="534" y="89" width="55" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="WFL-dO-iOl">
+                            <dateFormatter key="formatter" dateStyle="short" id="1nY-NX-kNO"/>
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="325" y="433"/>
+            <point key="canvasLocation" x="579" y="481"/>
         </window>
     </objects>
     <resources>
